@@ -1,12 +1,15 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
 // Change code below this line
 const galleryContainer = document.querySelector('.gallery');
 
 
 const imgElements = galleryItems.map( ({original, preview, description} )  => {
     return `
-    <li>
+    <li class="gallery">
     <a class="gallery__item" href=${original}>
   <img class="gallery__image" src=${preview} alt=${description} />
 </a>
